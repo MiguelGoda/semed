@@ -13,13 +13,13 @@
     <!-- Navbar -->
     <nav class="navbar-semed">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 py-3">
+            <div class="flex justify-between items-center h-16 md:h-20 py-2 md:py-3">
                 <!-- Logo SEMED - Izquierda -->
                 <div class="flex items-center">
-                    <img src="images/logos/logo-semed.jpg" alt="Logo SEMED" class="h-14 w-auto rounded-lg shadow-md">
+                    <img src="images/logos/logo-semed.jpg" alt="Logo SEMED" class="h-10 md:h-14 w-auto rounded-lg shadow-md">
                 </div>
 
-                <!-- Links de Navegación - Centro -->
+                <!-- Links de Navegación - Centro (Desktop) -->
                 <div class="hidden md:flex space-x-4">
                     <a href="#inicio" class="navbar-semed-link">Início</a>
                     <a href="#sobre" class="navbar-semed-link">Sobre</a>
@@ -28,33 +28,43 @@
                 </div>
 
                 <!-- Logo Municipio - Derecha -->
-                <div class="flex items-center">
-                    <img src="images/logos/logo-municipio.jpg" alt="Logo Município" class="h-14 w-auto rounded-lg shadow-md">
-                </div>
+                <div class="flex items-center gap-3">
+                    <img src="images/logos/logo-municipio.jpg" alt="Logo Município" class="h-10 md:h-14 w-auto rounded-lg shadow-md">
 
-                <!-- Botón móvil -->
-                <button class="md:hidden text-white">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+                    <!-- Botón móvil -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menú Móvil -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-2 mt-2">
+                    <a href="#inicio" class="navbar-semed-link block py-3 px-4 rounded-lg">Início</a>
+                    <a href="#sobre" class="navbar-semed-link block py-3 px-4 rounded-lg">Sobre</a>
+                    <a href="#downloads" class="navbar-semed-link block py-3 px-4 rounded-lg">Downloads</a>
+                    <a href="#contato" class="navbar-semed-link block py-3 px-4 rounded-lg">Contato</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="bg-semed-gradient text-white py-20">
+    <section id="inicio" class="bg-semed-gradient text-white py-12 md:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <h1 class="text-3xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                 Secretaria Municipal de Educação
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-white/90">
+            <p class="text-lg md:text-2xl mb-6 md:mb-8 text-white/90">
                 Compromisso com a educação de qualidade para todos
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#sobre" class="btn-semed-primary bg-white text-green-700 hover:bg-gray-100">
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+                <a href="#sobre" class="btn-semed-primary bg-white text-green-700 hover:bg-gray-100 py-3 md:py-2 text-base">
                     <i class="fas fa-info-circle mr-2"></i>
                     Saiba Mais
                 </a>
-                <a href="#downloads" class="btn-semed-outline border-white text-white hover:bg-white hover:text-green-700">
+                <a href="#downloads" class="btn-semed-outline border-white text-white hover:bg-white hover:text-green-700 py-3 md:py-2 text-base">
                     <i class="fas fa-download mr-2"></i>
                     Baixar Recursos
                 </a>
@@ -62,10 +72,13 @@
         </div>
     </section>
 
+    <!-- Separador -->
+    <div class="border-t border-gray-200"></div>
+
     <!-- Stats Section -->
-    <section class="py-16 bg-white">
+    <section class="py-8 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 <div class="stat-semed-home">
                     <i class="fas fa-school text-4xl mb-3" style="color: var(--semed-primary);"></i>
                     <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">88</span>
@@ -73,13 +86,13 @@
                 </div>
                 <div class="stat-semed-home">
                     <i class="fas fa-user-graduate text-4xl mb-3" style="color: var(--semed-primary);"></i>
-                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">5963</span>
+                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">5842</span>
                     <span class="text-lg text-gray-600">Alunos Matriculados</span>
                 </div>
                 <div class="stat-semed-home">
-                    <i class="fas fa-chalkboard-teacher text-4xl mb-3" style="color: var(--semed-primary);"></i>
-                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">156</span>
-                    <span class="text-lg text-gray-600">Professores Ativos</span>
+                    <i class="fas fa-bus text-4xl mb-3" style="color: var(--semed-primary);"></i>
+                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">1357</span>
+                    <span class="text-lg text-gray-600">Transporte Escolar</span>
                 </div>
                 <div class="stat-semed-home">
                     <i class="fas fa-map-marked-alt text-4xl mb-3" style="color: var(--semed-primary);"></i>
@@ -90,17 +103,20 @@
         </div>
     </section>
 
+    <!-- Separador -->
+    <div class="border-t border-gray-200"></div>
+
     <!-- Sobre Section -->
-    <section id="sobre" class="py-20 bg-gray-50">
+    <section id="sobre" class="py-12 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre a SEMED</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Sobre a SEMED</h2>
+                <p class="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
                     Gestão e desenvolvimento da educação municipal
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
                 <div class="card-semed p-8">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
@@ -138,15 +154,18 @@
         </div>
     </section>
 
+    <!-- Separador -->
+    <div class="border-t border-gray-200"></div>
+
     <!-- Downloads Section -->
-    <section id="downloads" class="py-20 bg-white">
+    <section id="downloads" class="py-12 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Downloads</h2>
-                <p class="text-xl text-gray-600">Materiais e documentos disponíveis para download</p>
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Downloads</h2>
+                <p class="text-base md:text-xl text-gray-600">Materiais e documentos disponíveis para download</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <!-- Manual do Usuario -->
                 <div class="card-semed p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-start">
@@ -282,12 +301,15 @@
         </div>
     </section>
 
+    <!-- Separador -->
+    <div class="border-t border-gray-200"></div>
+
     <!-- Contato Section -->
-    <section id="contato" class="py-20 bg-gray-50">
+    <section id="contato" class="py-12 md:py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Localização</h2>
-                <p class="text-xl text-gray-600">Visite nossa sede</p>
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Localização</h2>
+                <p class="text-base md:text-xl text-gray-600">Visite nossa sede</p>
             </div>
 
             <div class="flex justify-center">
@@ -305,10 +327,13 @@
         </div>
     </section>
 
+    <!-- Separador -->
+    <div class="border-t border-gray-300"></div>
+
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
                 <div>
                     <div class="flex items-center mb-4">
                         <i class="fas fa-graduation-cap text-2xl mr-2"></i>
@@ -351,18 +376,47 @@
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+            <div class="border-t border-gray-800 pt-6 md:pt-8 text-center text-xs md:text-sm text-gray-400">
                 <p>&copy; 2025 SEMED - Secretaria Municipal de Educação. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to top button -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full text-white shadow-lg opacity-0 transition-opacity duration-300 hover:shadow-xl" style="background-color: var(--semed-primary);">
-        <i class="fas fa-arrow-up"></i>
+    <button id="scrollTop" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 w-12 h-12 md:w-14 md:h-14 rounded-full text-white shadow-lg opacity-0 transition-all duration-300 hover:shadow-xl active:scale-95" style="background-color: var(--semed-primary);">
+        <i class="fas fa-arrow-up text-lg md:text-xl"></i>
     </button>
 
     <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Cerrar menú al hacer click en un link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -393,15 +447,6 @@
                 behavior: 'smooth'
             });
         });
-
-        // Mobile menu toggle (optional enhancement)
-        const mobileMenuBtn = document.querySelector('.md\\:hidden');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                // Add mobile menu functionality here if needed
-                alert('Menu mobile - funcionalidade pode ser expandida conforme necessário');
-            });
-        }
     </script>
 </body>
 </html>
