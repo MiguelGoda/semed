@@ -1,0 +1,231 @@
+/* ========================================
+   SEMED - Variables CSS
+   ======================================== */
+:root {
+    /* Colores Primarios */
+    --semed-primary: #2E8B57;
+    --semed-primary-dark: #236B43;
+    --semed-primary-light: #3FAB6F;
+    --semed-primary-rgb: 46, 139, 87;
+
+    --semed-secondary: #17a2b8;
+    --semed-secondary-dark: #138496;
+    --semed-secondary-light: #5BC0DE;
+
+    /* Colores de Estado */
+    --semed-success: #28a745;
+    --semed-success-light: #d4edda;
+    --semed-success-dark: #155724;
+
+    --semed-error: #dc3545;
+    --semed-error-light: #f8d7da;
+    --semed-error-dark: #721c24;
+
+    --semed-warning: #ffc107;
+    --semed-warning-light: #fff3cd;
+    --semed-warning-dark: #856404;
+
+    --semed-info: #17a2b8;
+    --semed-info-light: #d1ecf1;
+    --semed-info-dark: #0c5460;
+
+    --semed-gray-200: #E5E7EB;
+
+    /* Transiciones */
+    --semed-transition-fast: 150ms ease-in-out;
+    --semed-transition: 200ms ease-in-out;
+    --semed-transition-slow: 300ms ease-in-out;
+
+    /* Focus Ring */
+    --semed-focus-ring: 0 0 0 3px rgba(var(--semed-primary-rgb), 0.1);
+}
+
+/* ================================
+   SEMED Custom Components
+   ================================ */
+
+/* Navbar SEMED */
+.navbar-semed {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, var(--semed-primary) 0%, var(--semed-primary-dark) 100%);
+}
+
+.navbar-semed-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navbar-semed-link {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.navbar-semed-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Background utilities */
+.bg-semed-gradient {
+    background: linear-gradient(135deg, var(--semed-primary) 0%, var(--semed-primary-dark) 100%);
+}
+
+.bg-semed-primary {
+    background-color: var(--semed-primary);
+}
+
+/* Botões SEMED */
+.btn-semed-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    background-color: var(--semed-primary);
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-semed-primary:hover {
+    background-color: var(--semed-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-semed-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--semed-primary);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--semed-primary);
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-semed-outline:hover {
+    background-color: var(--semed-primary);
+    color: white;
+}
+
+/* Cards SEMED */
+.card-semed {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s;
+}
+
+.card-semed-interactive {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.card-semed-interactive:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Stats */
+.stat-semed-home {
+    background: linear-gradient(to right, #F9FAFB, #F3F4F6);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    color: #1F2937;
+}
+
+.stat-semed-home:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms SEMED */
+.form-semed-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-semed-input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.form-semed-input:focus {
+    outline: none;
+    border-color: var(--semed-primary);
+    box-shadow: var(--semed-focus-ring);
+}
+
+.form-semed-select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    padding-right: 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+}
+
+.form-semed-select:focus {
+    outline: none;
+    border-color: var(--semed-primary);
+    box-shadow: var(--semed-focus-ring);
+}
+
+.form-semed-textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    resize: vertical;
+}
+
+.form-semed-textarea:focus {
+    outline: none;
+    border-color: var(--semed-primary);
+    box-shadow: var(--semed-focus-ring);
+}
+
+.form-semed-group {
+    margin-bottom: 1rem;
+}

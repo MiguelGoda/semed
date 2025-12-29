@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMEB - Sistema de Informação e Monitoramento da Educação Básica</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>SEMED - Secretaria Municipal de Educação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="custom-semed.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50">
 
     <!-- Navbar -->
-    <nav class="navbar-simeb">
+    <nav class="navbar-semed">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20 py-3">
+                <!-- Logo SEMED - Izquierda -->
                 <div class="flex items-center">
-                    <i class="fas fa-graduation-cap text-white text-2xl mr-3"></i>
-                    <span class="navbar-simeb-brand">SIMEB</span>
+                    <img src="images/logos/logo-semed.jpg" alt="Logo SEMED" class="h-14 w-auto rounded-lg shadow-md">
                 </div>
+
+                <!-- Links de Navegación - Centro -->
                 <div class="hidden md:flex space-x-4">
-                    <a href="#inicio" class="navbar-simeb-link">Início</a>
-                    <a href="#sobre" class="navbar-simeb-link">Sobre</a>
-                    <a href="#recursos" class="navbar-simeb-link">Recursos</a>
-                    <a href="#downloads" class="navbar-simeb-link">Downloads</a>
-                    <a href="#contato" class="navbar-simeb-link">Contato</a>
+                    <a href="#inicio" class="navbar-semed-link">Início</a>
+                    <a href="#sobre" class="navbar-semed-link">Sobre</a>
+                    <a href="#downloads" class="navbar-semed-link">Downloads</a>
+                    <a href="#contato" class="navbar-semed-link">Contato</a>
                 </div>
+
+                <!-- Logo Municipio - Derecha -->
+                <div class="flex items-center">
+                    <img src="images/logos/logo-municipio.jpg" alt="Logo Município" class="h-14 w-auto rounded-lg shadow-md">
+                </div>
+
+                <!-- Botón móvil -->
                 <button class="md:hidden text-white">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
@@ -32,20 +41,20 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="bg-simeb-gradient text-white py-20">
+    <section id="inicio" class="bg-semed-gradient text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                Sistema de Informação e Monitoramento da Educação Básica
+                Secretaria Municipal de Educação
             </h1>
             <p class="text-xl md:text-2xl mb-8 text-white/90">
-                Gestão eficiente e transparente para a educação de qualidade
+                Compromisso com a educação de qualidade para todos
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#sobre" class="btn-simeb-primary bg-white text-green-700 hover:bg-gray-100">
+                <a href="#sobre" class="btn-semed-primary bg-white text-green-700 hover:bg-gray-100">
                     <i class="fas fa-info-circle mr-2"></i>
                     Saiba Mais
                 </a>
-                <a href="#downloads" class="btn-simeb-outline border-white text-white hover:bg-white hover:text-green-700">
+                <a href="#downloads" class="btn-semed-outline border-white text-white hover:bg-white hover:text-green-700">
                     <i class="fas fa-download mr-2"></i>
                     Baixar Recursos
                 </a>
@@ -57,24 +66,24 @@
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="stat-simeb-home">
-                    <i class="fas fa-school text-4xl mb-3" style="color: var(--simeb-primary);"></i>
-                    <span class="text-4xl font-bold block mb-2" style="color: var(--simeb-primary);">1.245</span>
-                    <span class="text-lg text-gray-600">Escolas Cadastradas</span>
+                <div class="stat-semed-home">
+                    <i class="fas fa-school text-4xl mb-3" style="color: var(--semed-primary);"></i>
+                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">88</span>
+                    <span class="text-lg text-gray-600">Escolas Municipais</span>
                 </div>
-                <div class="stat-simeb-home">
-                    <i class="fas fa-user-graduate text-4xl mb-3" style="color: var(--simeb-primary);"></i>
-                    <span class="text-4xl font-bold block mb-2" style="color: var(--simeb-primary);">45.680</span>
+                <div class="stat-semed-home">
+                    <i class="fas fa-user-graduate text-4xl mb-3" style="color: var(--semed-primary);"></i>
+                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">5963</span>
                     <span class="text-lg text-gray-600">Alunos Matriculados</span>
                 </div>
-                <div class="stat-simeb-home">
-                    <i class="fas fa-chalkboard-teacher text-4xl mb-3" style="color: var(--simeb-primary);"></i>
-                    <span class="text-4xl font-bold block mb-2" style="color: var(--simeb-primary);">3.892</span>
+                <div class="stat-semed-home">
+                    <i class="fas fa-chalkboard-teacher text-4xl mb-3" style="color: var(--semed-primary);"></i>
+                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">156</span>
                     <span class="text-lg text-gray-600">Professores Ativos</span>
                 </div>
-                <div class="stat-simeb-home">
-                    <i class="fas fa-map-marked-alt text-4xl mb-3" style="color: var(--simeb-primary);"></i>
-                    <span class="text-4xl font-bold block mb-2" style="color: var(--simeb-primary);">156</span>
+                <div class="stat-semed-home">
+                    <i class="fas fa-map-marked-alt text-4xl mb-3" style="color: var(--semed-primary);"></i>
+                    <span class="text-4xl font-bold block mb-2" style="color: var(--semed-primary);">90</span>
                     <span class="text-lg text-gray-600">Comunidades Atendidas</span>
                 </div>
             </div>
@@ -85,117 +94,45 @@
     <section id="sobre" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre o SIMEB</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre a SEMED</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Plataforma integrada para gestão e monitoramento da educação básica
+                    Gestão e desenvolvimento da educação municipal
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="card-simeb p-8">
+                <div class="card-semed p-8">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-md text-white" style="background-color: var(--simeb-primary);">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md text-white" style="background-color: var(--semed-primary);">
                                 <i class="fas fa-bullseye text-xl"></i>
                             </div>
                         </div>
                         <div class="ml-4">
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Nossa Missão</h3>
                             <p class="text-gray-600">
-                                Fornecer ferramentas eficientes para a gestão educacional, promovendo transparência,
-                                qualidade e acessibilidade na educação básica em todo o território nacional.
+                                Promover uma educação pública municipal de qualidade, garantindo acesso,
+                                permanência e aprendizagem significativa para todos os estudantes.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-simeb p-8">
+                <div class="card-semed p-8">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-md text-white" style="background-color: var(--simeb-secondary);">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md text-white" style="background-color: var(--semed-secondary);">
                                 <i class="fas fa-eye text-xl"></i>
                             </div>
                         </div>
                         <div class="ml-4">
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Nossa Visão</h3>
                             <p class="text-gray-600">
-                                Ser referência nacional em sistemas de informação educacional, contribuindo para
-                                a melhoria contínua da qualidade da educação brasileira.
+                                Ser referência em educação pública municipal, formando cidadãos críticos,
+                                criativos e preparados para os desafios do século XXI.
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recursos Section -->
-    <section id="recursos" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Recursos Principais</h2>
-                <p class="text-xl text-gray-600">Funcionalidades que fazem a diferença</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-simeb-interactive p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-primary); opacity: 0.1;">
-                        <i class="fas fa-database text-3xl" style="color: var(--simeb-primary);"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Gestão de Dados</h3>
-                    <p class="text-gray-600">
-                        Cadastro completo de escolas, alunos, professores e infraestrutura educacional.
-                    </p>
-                </div>
-
-                <div class="card-simeb-interactive p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-secondary); opacity: 0.1;">
-                        <i class="fas fa-chart-line text-3xl" style="color: var(--simeb-secondary);"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Relatórios e Indicadores</h3>
-                    <p class="text-gray-600">
-                        Análises detalhadas e visualizações para tomada de decisões estratégicas.
-                    </p>
-                </div>
-
-                <div class="card-simeb-interactive p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-success); opacity: 0.1;">
-                        <i class="fas fa-map-marker-alt text-3xl" style="color: var(--simeb-success);"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Geolocalização</h3>
-                    <p class="text-gray-600">
-                        Mapeamento geográfico das unidades escolares e comunidades atendidas.
-                    </p>
-                </div>
-
-                <div class="card-simeb-interactive p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-warning); opacity: 0.1;">
-                        <i class="fas fa-users text-3xl" style="color: var(--simeb-warning);"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Gestão de Usuários</h3>
-                    <p class="text-gray-600">
-                        Sistema robusto de permissões e controle de acesso por perfis.
-                    </p>
-                </div>
-
-                <div class="card-simeb-interactive p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-info); opacity: 0.1;">
-                        <i class="fas fa-file-alt text-3xl" style="color: var(--simeb-info);"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Documentação Completa</h3>
-                    <p class="text-gray-600">
-                        Manuais, guias e tutoriais para facilitar o uso do sistema.
-                    </p>
-                </div>
-
-                <div class="card-simeb-interactive p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-error); opacity: 0.1;">
-                        <i class="fas fa-headset text-3xl" style="color: var(--simeb-error);"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Suporte Técnico</h3>
-                    <p class="text-gray-600">
-                        Equipe dedicada para atendimento e resolução de problemas.
-                    </p>
                 </div>
             </div>
         </div>
@@ -211,19 +148,19 @@
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Manual do Usuario -->
-                <div class="card-simeb p-6 hover:shadow-lg transition-shadow">
+                <div class="card-semed p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--simeb-error-light);">
-                                <i class="fas fa-file-pdf text-2xl" style="color: var(--simeb-error);"></i>
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--semed-error-light);">
+                                <i class="fas fa-file-pdf text-2xl" style="color: var(--semed-error);"></i>
                             </div>
                         </div>
                         <div class="ml-4 flex-1">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Manual do Usuário</h3>
-                            <p class="text-sm text-gray-600 mb-3">Guia completo de utilização do sistema SIMEB</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Manual do Gestor</h3>
+                            <p class="text-sm text-gray-600 mb-3">Guia completo para gestores escolares</p>
                             <div class="flex items-center justify-between">
                                 <span class="text-xs text-gray-500">PDF • 2.5 MB</span>
-                                <a href="#" class="btn-simeb-primary text-xs py-2 px-4">
+                                <a href="downloads/manual-gestor-semed.pdf" download class="btn-semed-primary text-xs py-2 px-4">
                                     <i class="fas fa-download mr-1"></i>
                                     Baixar
                                 </a>
@@ -233,19 +170,19 @@
                 </div>
 
                 <!-- Guia Rapido -->
-                <div class="card-simeb p-6 hover:shadow-lg transition-shadow">
+                <div class="card-semed p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--simeb-success-light);">
-                                <i class="fas fa-file-pdf text-2xl" style="color: var(--simeb-success);"></i>
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--semed-success-light);">
+                                <i class="fas fa-file-pdf text-2xl" style="color: var(--semed-success);"></i>
                             </div>
                         </div>
                         <div class="ml-4 flex-1">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Guia Rápido</h3>
-                            <p class="text-sm text-gray-600 mb-3">Principais funcionalidades em formato resumido</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Calendário Escolar</h3>
+                            <p class="text-sm text-gray-600 mb-3">Calendário oficial das atividades escolares</p>
                             <div class="flex items-center justify-between">
                                 <span class="text-xs text-gray-500">PDF • 850 KB</span>
-                                <a href="#" class="btn-simeb-primary text-xs py-2 px-4">
+                                <a href="downloads/calendario-escolar-semed.pdf" download class="btn-semed-primary text-xs py-2 px-4">
                                     <i class="fas fa-download mr-1"></i>
                                     Baixar
                                 </a>
@@ -255,19 +192,19 @@
                 </div>
 
                 <!-- Modelo de Planilha -->
-                <div class="card-simeb p-6 hover:shadow-lg transition-shadow">
+                <div class="card-semed p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--simeb-success-light);">
-                                <i class="fas fa-file-excel text-2xl" style="color: var(--simeb-success);"></i>
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--semed-success-light);">
+                                <i class="fas fa-file-excel text-2xl" style="color: var(--semed-success);"></i>
                             </div>
                         </div>
                         <div class="ml-4 flex-1">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Modelo de Planilha</h3>
-                            <p class="text-sm text-gray-600 mb-3">Template para importação em massa de dados</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Formulários</h3>
+                            <p class="text-sm text-gray-600 mb-3">Documentos e formulários para download</p>
                             <div class="flex items-center justify-between">
                                 <span class="text-xs text-gray-500">XLSX • 45 KB</span>
-                                <a href="#" class="btn-simeb-primary text-xs py-2 px-4">
+                                <a href="downloads/formularios-semed.xlsx" download class="btn-semed-primary text-xs py-2 px-4">
                                     <i class="fas fa-download mr-1"></i>
                                     Baixar
                                 </a>
@@ -277,19 +214,19 @@
                 </div>
 
                 <!-- Apresentacao Institucional -->
-                <div class="card-simeb p-6 hover:shadow-lg transition-shadow">
+                <div class="card-semed p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--simeb-warning-light);">
-                                <i class="fas fa-file-powerpoint text-2xl" style="color: var(--simeb-warning);"></i>
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--semed-warning-light);">
+                                <i class="fas fa-file-powerpoint text-2xl" style="color: var(--semed-warning);"></i>
                             </div>
                         </div>
                         <div class="ml-4 flex-1">
                             <h3 class="text-lg font-semibold text-gray-900 mb-1">Apresentação Institucional</h3>
-                            <p class="text-sm text-gray-600 mb-3">Conheça o sistema e seus benefícios</p>
+                            <p class="text-sm text-gray-600 mb-3">Conheça a SEMED e seus programas</p>
                             <div class="flex items-center justify-between">
                                 <span class="text-xs text-gray-500">PPTX • 3.2 MB</span>
-                                <a href="#" class="btn-simeb-primary text-xs py-2 px-4">
+                                <a href="downloads/apresentacao-institucional-semed.pptx" download class="btn-semed-primary text-xs py-2 px-4">
                                     <i class="fas fa-download mr-1"></i>
                                     Baixar
                                 </a>
@@ -298,20 +235,20 @@
                     </div>
                 </div>
 
-                <!-- Video Tutorial -->
-                <div class="card-simeb p-6 hover:shadow-lg transition-shadow">
+                <!-- Plano Municipal -->
+                <div class="card-semed p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--simeb-info-light);">
-                                <i class="fas fa-file-video text-2xl" style="color: var(--simeb-info);"></i>
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--semed-info-light);">
+                                <i class="fas fa-file-alt text-2xl" style="color: var(--semed-info);"></i>
                             </div>
                         </div>
                         <div class="ml-4 flex-1">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Vídeo Tutorial</h3>
-                            <p class="text-sm text-gray-600 mb-3">Tutorial em vídeo - Primeiros Passos</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Plano Municipal de Educação</h3>
+                            <p class="text-sm text-gray-600 mb-3">Diretrizes da educação municipal</p>
                             <div class="flex items-center justify-between">
-                                <span class="text-xs text-gray-500">MP4 • 45 MB</span>
-                                <a href="#" class="btn-simeb-primary text-xs py-2 px-4">
+                                <span class="text-xs text-gray-500">PDF • 45 MB</span>
+                                <a href="downloads/plano-municipal-educacao-semed.pdf" download class="btn-semed-primary text-xs py-2 px-4">
                                     <i class="fas fa-download mr-1"></i>
                                     Baixar
                                 </a>
@@ -321,19 +258,19 @@
                 </div>
 
                 <!-- Legislacao -->
-                <div class="card-simeb p-6 hover:shadow-lg transition-shadow">
+                <div class="card-semed p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--simeb-gray-200);">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: var(--semed-gray-200);">
                                 <i class="fas fa-file-pdf text-2xl text-gray-700"></i>
                             </div>
                         </div>
                         <div class="ml-4 flex-1">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Legislação Aplicável</h3>
-                            <p class="text-sm text-gray-600 mb-3">Base legal e normativas do sistema</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Legislação Educacional</h3>
+                            <p class="text-sm text-gray-600 mb-3">Leis e normativas da educação municipal</p>
                             <div class="flex items-center justify-between">
                                 <span class="text-xs text-gray-500">PDF • 1.8 MB</span>
-                                <a href="#" class="btn-simeb-primary text-xs py-2 px-4">
+                                <a href="downloads/legislacao-educacional-semed.pdf" download class="btn-semed-primary text-xs py-2 px-4">
                                     <i class="fas fa-download mr-1"></i>
                                     Baixar
                                 </a>
@@ -353,75 +290,15 @@
                 <p class="text-xl text-gray-600">Estamos aqui para ajudar</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-primary);">
-                        <i class="fas fa-phone text-2xl text-white"></i>
+            <div class="flex justify-center">
+                <div class="text-center max-w-md">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center" style="background-color: var(--semed-primary);">
+                        <i class="fas fa-map-marker-alt text-3xl text-white"></i>
                     </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Telefone</h3>
-                    <p class="text-gray-600">0800 123 4567</p>
-                    <p class="text-sm text-gray-500">Seg-Sex, 8h-18h</p>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3"> Bairro São Francisco, Rua Dom Pedro I</h3>
+                    <p class="text-lg text-gray-700 mb-2">Beruri</p>
+                    <p class="text-gray-500">Brasil</p>
                 </div>
-
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-secondary);">
-                        <i class="fas fa-envelope text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Email</h3>
-                    <p class="text-gray-600">contato@simeb.gov.br</p>
-                    <p class="text-sm text-gray-500">Resposta em 24h</p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--simeb-success);">
-                        <i class="fas fa-map-marker-alt text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Endereço</h3>
-                    <p class="text-gray-600">Brasília - DF</p>
-                    <p class="text-sm text-gray-500">Brasil</p>
-                </div>
-            </div>
-
-            <div class="card-simeb p-8">
-                <form class="space-y-6">
-                    <div class="form-simeb-group">
-                        <label class="form-simeb-label">Nome Completo</label>
-                        <input type="text" class="form-simeb-input" placeholder="Digite seu nome">
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="form-simeb-group">
-                            <label class="form-simeb-label">Email</label>
-                            <input type="email" class="form-simeb-input" placeholder="seu@email.com">
-                        </div>
-
-                        <div class="form-simeb-group">
-                            <label class="form-simeb-label">Telefone</label>
-                            <input type="tel" class="form-simeb-input" placeholder="(00) 00000-0000">
-                        </div>
-                    </div>
-
-                    <div class="form-simeb-group">
-                        <label class="form-simeb-label">Assunto</label>
-                        <select class="form-simeb-select">
-                            <option>Selecione uma opção</option>
-                            <option>Dúvida sobre o sistema</option>
-                            <option>Suporte técnico</option>
-                            <option>Solicitação de acesso</option>
-                            <option>Outros</option>
-                        </select>
-                    </div>
-
-                    <div class="form-simeb-group">
-                        <label class="form-simeb-label">Mensagem</label>
-                        <textarea class="form-simeb-textarea" rows="5" placeholder="Digite sua mensagem aqui..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-simeb-primary w-full md:w-auto">
-                        <i class="fas fa-paper-plane mr-2"></i>
-                        Enviar Mensagem
-                    </button>
-                </form>
             </div>
         </div>
     </section>
@@ -433,10 +310,10 @@
                 <div>
                     <div class="flex items-center mb-4">
                         <i class="fas fa-graduation-cap text-2xl mr-2"></i>
-                        <span class="font-bold text-xl">SIMEB</span>
+                        <span class="font-bold text-xl">SEMED</span>
                     </div>
                     <p class="text-gray-400 text-sm">
-                        Sistema de Informação e Monitoramento da Educação Básica
+                        Secretaria Municipal de Educação
                     </p>
                 </div>
 
@@ -450,43 +327,28 @@
                     </ul>
                 </div>
 
-                <div>
-                    <h4 class="font-semibold mb-4">Suporte</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Central de Ajuda</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Documentação</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
-                    </ul>
-                </div>
 
                 <div>
                     <h4 class="font-semibold mb-4">Redes Sociais</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors">
+                        <a target="_blank" href="https://www.facebook.com/prefeituradeberuri" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors">
+                        <a target="_blank" href="https://www.instagram.com/prefeituradeberuri_/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors">
                             <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors">
-                            <i class="fab fa-youtube"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2025 SIMEB - Sistema de Informação e Monitoramento da Educação Básica. Todos os direitos reservados.</p>
+                <p>&copy; 2025 SEMED - Secretaria Municipal de Educação. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to top button -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full text-white shadow-lg opacity-0 transition-opacity duration-300 hover:shadow-xl" style="background-color: var(--simeb-primary);">
+    <button id="scrollTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full text-white shadow-lg opacity-0 transition-opacity duration-300 hover:shadow-xl" style="background-color: var(--semed-primary);">
         <i class="fas fa-arrow-up"></i>
     </button>
 
