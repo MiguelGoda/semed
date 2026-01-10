@@ -221,38 +221,99 @@
                 <p class="text-base md:text-xl text-gray-600">Documentos institucionais e orientações pedagógicas</p>
             </div>
 
-            <div class="max-w-2xl mx-auto">
-                <div class="card-semed p-8 hover:shadow-xl transition-shadow">
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+            <!-- BNCC Destacada -->
+            <div class="max-w-4xl mx-auto mb-8">
+                <div class="card-semed p-6 hover:shadow-xl transition-shadow border-t-4" style="border-color: #dc2626;">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
                         <div class="flex-shrink-0">
-                            <div class="w-20 h-20 rounded-2xl flex items-center justify-center shadow-lg"
-                                style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
-                                <i class="fas fa-book-open text-4xl text-white"></i>
+                            <div class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
+                                style="background: linear-gradient(135deg, #dc2626, #ef4444);">
+                                <i class="fas fa-flag-checkered text-3xl text-white"></i>
                             </div>
                         </div>
                         <div class="flex-1 text-center md:text-left">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Proposta Curricular e Pedagógica</h3>
-                            <p class="text-gray-600 mb-4">
-                                Documento oficial da Proposta Curricular e Pedagógica do Ensino Fundamental
-                            </p>
-                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
-                                <p class="text-sm text-blue-700">
-                                    <i class="fas fa-info-circle mr-2"></i>
-                                    <strong>Documento Institucional:</strong> Base curricular e pedagógica da rede
-                                    municipal de ensino
-                                </p>
-                            </div>
-                            <div class="flex flex-col sm:flex-row gap-3 items-center justify-center md:justify-start">
-                                <a href="downloads/PCP-EF_ASSINADA_E_DIVULGADA.pdf" download
-                                    class="btn-semed-primary inline-flex items-center text-base py-3 px-6">
-                                    <i class="fas fa-download mr-2"></i>
-                                    Baixar Documento (PDF)
-                                </a>
-                                <span class="text-sm text-gray-500">
-                                    <i class="fas fa-file-pdf mr-1"></i>
-                                    25 MB
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                                <h3 class="text-xl font-bold text-gray-900">BNCC - Base Nacional Comum Curricular</h3>
+                                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-red-100 text-red-800">
+                                    <i class="fas fa-star mr-1"></i>Referência Nacional
                                 </span>
                             </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                Documento normativo que define as aprendizagens essenciais para toda a Educação Básica
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <a href="downloads/BNCC_completa.pdf.pdf" download
+                                class="btn-semed-primary inline-flex items-center text-sm py-2 px-4 whitespace-nowrap">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar PDF
+                            </a>
+                            <span class="text-xs text-gray-500">3.4 MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentos Municipais - Grid 2 columnas -->
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Resolução MEC -->
+                    <div class="card-semed p-6 hover:shadow-xl transition-shadow border-l-4" style="border-color: #059669;">
+                        <div class="text-center">
+                            <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center shadow-lg"
+                                style="background: linear-gradient(135deg, #059669, #10b981);">
+                                <i class="fas fa-file-signature text-2xl text-white"></i>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Resolução MEC</h3>
+                                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-green-100 text-green-800">
+                                    <i class="fas fa-stamp mr-1"></i>Documento Oficial
+                                </span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Proposta Curricular do Sistema Municipal de Ensino - Beruri/AM
+                            </p>
+                            <div class="bg-green-50 border-l-4 border-green-500 p-3 mb-4 text-left">
+                                <p class="text-xs text-green-700">
+                                    <i class="fas fa-check-circle mr-1"></i>
+                                    <strong>Autorização legal</strong> do sistema municipal de ensino
+                                </p>
+                            </div>
+                            <a href="downloads/SISTEMA_MUNICIPAL_105749.pdf" download
+                                class="btn-semed-primary inline-flex items-center text-sm py-2 px-4 w-full justify-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar Resolução (606 KB)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Proposta Curricular -->
+                    <div class="card-semed p-6 hover:shadow-xl transition-shadow border-l-4" style="border-color: #1e40af;">
+                        <div class="text-center">
+                            <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center shadow-lg"
+                                style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+                                <i class="fas fa-book-open text-2xl text-white"></i>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Proposta Curricular e Pedagógica</h3>
+                                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-blue-100 text-blue-800">
+                                    <i class="fas fa-graduation-cap mr-1"></i>Ensino Fundamental
+                                </span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Documento oficial da Proposta Curricular e Pedagógica do Ensino Fundamental
+                            </p>
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4 text-left">
+                                <p class="text-xs text-blue-700">
+                                    <i class="fas fa-info-circle mr-1"></i>
+                                    <strong>Base pedagógica</strong> da rede municipal de ensino
+                                </p>
+                            </div>
+                            <a href="downloads/PCP-EF_ASSINADA_E_DIVULGADA.pdf" download
+                                class="btn-semed-primary inline-flex items-center text-sm py-2 px-4 w-full justify-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar Documento (25 MB)
+                            </a>
                         </div>
                     </div>
                 </div>
