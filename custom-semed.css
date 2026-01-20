@@ -229,3 +229,27 @@
 .form-semed-group {
     margin-bottom: 1rem;
 }
+
+/* ================================
+   Category Tabs - Inscritos
+   ================================ */
+.category-tab {
+    border-color: transparent;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.category-tab:hover {
+    color: #374151;
+    border-color: #d1d5db;
+}
+
+.category-tab.active {
+    border-color: var(--semed-primary);
+    color: var(--semed-primary);
+}
+
+.category-tab:focus {
+    outline: none;
+    box-shadow: var(--semed-focus-ring);
+}
