@@ -662,8 +662,14 @@
                     </button>
                 </div>
 
+                <!-- Scroll hint for mobile -->
+                <div class="md:hidden mb-2 flex items-center justify-end text-xs text-gray-500">
+                    <i class="fas fa-arrows-left-right mr-1"></i>
+                    Deslize para ver mais
+                </div>
+
                 <!-- Table Container - Responsive -->
-                <div class="overflow-x-auto rounded-lg border border-gray-200">
+                <div class="overflow-x-auto rounded-lg border border-gray-200 scroll-smooth">
                     <table class="min-w-full divide-y divide-gray-200" id="inscritosTable">
                         <thead class="bg-gray-50" id="tableHead">
                             <tr>
@@ -1000,10 +1006,10 @@
                 headers: [
                     { label: 'Nº Inscr.', class: '' },
                     { label: 'Nome', class: '' },
-                    { label: 'Função/Especialidade', class: 'hidden md:table-cell' },
-                    { label: 'Polo', class: 'hidden md:table-cell' },
-                    { label: 'Escola Pretendida', class: 'hidden lg:table-cell' },
-                    { label: 'Localidade', class: 'hidden xl:table-cell' }
+                    { label: 'Função/Especialidade', class: '' },
+                    { label: 'Polo', class: '' },
+                    { label: 'Escola Pretendida', class: '' },
+                    { label: 'Localidade', class: '' }
                 ],
                 getRow: (item) => {
                     const numero = item.n_de_inscrição || '';
@@ -1013,11 +1019,11 @@
                     const localidade = item.localidade || '';
                     return `
                         <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
-                        <td class="px-4 py-3 text-sm text-gray-900">${item.nome}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell">${funcao}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell text-center">${polo}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell">${escola}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden xl:table-cell">${localidade}</td>
+                        <td class="px-4 py-3 text-sm text-gray-900 whitespace-nowrap">${item.nome}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${funcao}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 text-center">${polo}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${escola}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${localidade}</td>
                     `;
                 }
             },
@@ -1025,10 +1031,10 @@
                 headers: [
                     { label: 'Nº Inscr.', class: '' },
                     { label: 'Nome', class: '' },
-                    { label: 'Função/Especialidade', class: 'hidden md:table-cell' },
-                    { label: 'Polo', class: 'hidden md:table-cell' },
-                    { label: 'Escola Pretendida', class: 'hidden lg:table-cell' },
-                    { label: 'Aldeia', class: 'hidden xl:table-cell' }
+                    { label: 'Função/Especialidade', class: '' },
+                    { label: 'Polo', class: '' },
+                    { label: 'Escola Pretendida', class: '' },
+                    { label: 'Aldeia', class: '' }
                 ],
                 getRow: (item) => {
                     const numero = item.n_de_inscrição || '';
@@ -1038,11 +1044,11 @@
                     const aldeia = item.aldeia || '';
                     return `
                         <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
-                        <td class="px-4 py-3 text-sm text-gray-900">${item.nome}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell">${funcao}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell text-center">${polo}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell">${escola}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden xl:table-cell">${aldeia}</td>
+                        <td class="px-4 py-3 text-sm text-gray-900 whitespace-nowrap">${item.nome}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${funcao}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 text-center">${polo}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${escola}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${aldeia}</td>
                     `;
                 }
             },
@@ -1050,9 +1056,9 @@
                 headers: [
                     { label: 'Nº Inscr.', class: '' },
                     { label: 'Nome', class: '' },
-                    { label: 'Função/Especialidade', class: 'hidden md:table-cell' },
-                    { label: 'Polo', class: 'hidden lg:table-cell' },
-                    { label: 'Escola/Comunidade', class: 'hidden lg:table-cell' }
+                    { label: 'Función/Especialidade', class: '' },
+                    { label: 'Polo', class: '' },
+                    { label: 'Escola/Comunidade', class: '' }
                 ],
                 getRow: (item) => {
                     const numero = item.n_de_inscrição || item.n_de_inscricao || item.nº_de_inscrição || '';
@@ -1061,10 +1067,10 @@
                     const escola = item.escola_comunidade || '';
                     return `
                         <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
-                        <td class="px-4 py-3 text-sm text-gray-900">${item.nome}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell">${funcao}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell text-center">${polo}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell">${escola}</td>
+                        <td class="px-4 py-3 text-sm text-gray-900 whitespace-nowrap">${item.nome}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${funcao}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 text-center">${polo}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${escola}</td>
                     `;
                 }
             }
