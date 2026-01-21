@@ -1021,6 +1021,31 @@
                     `;
                 }
             },
+            professor_indigena: {
+                headers: [
+                    { label: 'Nº Inscr.', class: '' },
+                    { label: 'Nome', class: '' },
+                    { label: 'Função/Especialidade', class: 'hidden md:table-cell' },
+                    { label: 'Polo', class: 'hidden md:table-cell' },
+                    { label: 'Escola Pretendida', class: 'hidden lg:table-cell' },
+                    { label: 'Aldeia', class: 'hidden xl:table-cell' }
+                ],
+                getRow: (item) => {
+                    const numero = item.n_de_inscrição || '';
+                    const funcao = item.função_especialidade || '';
+                    const polo = item.polo || '';
+                    const escola = item.escola_comunidade || '';
+                    const aldeia = item.aldeia || '';
+                    return `
+                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
+                        <td class="px-4 py-3 text-sm text-gray-900">${item.nome}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell">${funcao}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell text-center">${polo}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell">${escola}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden xl:table-cell">${aldeia}</td>
+                    `;
+                }
+            },
             default: {
                 headers: [
                     { label: 'Nº Inscr.', class: '' },
