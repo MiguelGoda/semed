@@ -665,7 +665,7 @@
                 <!-- Table Container - Responsive -->
                 <div class="overflow-x-auto rounded-lg border border-gray-200">
                     <table class="min-w-full divide-y divide-gray-200" id="inscritosTable">
-                        <thead class="bg-gray-50">
+                        <thead class="bg-gray-50" id="tableHead">
                             <tr>
                                 <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     Nº Inscrição
@@ -994,6 +994,73 @@
             return data;
         }
 
+        // Column configurations per category
+        const columnConfigs = {
+            professor_pss: {
+                headers: [
+                    { label: 'Nº Inscr.', class: '' },
+                    { label: 'Nome', class: '' },
+                    { label: 'Função/Especialidade', class: 'hidden md:table-cell' },
+                    { label: 'Polo', class: 'hidden md:table-cell' },
+                    { label: 'Escola Pretendida', class: 'hidden lg:table-cell' },
+                    { label: 'Localidade', class: 'hidden xl:table-cell' }
+                ],
+                getRow: (item) => {
+                    const numero = item.n_de_inscrição || '';
+                    const funcao = item.função_especialidade || '';
+                    const polo = item.polo || '';
+                    const escola = item.escola_comunidade || '';
+                    const localidade = item.localidade || '';
+                    return `
+                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
+                        <td class="px-4 py-3 text-sm text-gray-900">${item.nome}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell">${funcao}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell text-center">${polo}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell">${escola}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden xl:table-cell">${localidade}</td>
+                    `;
+                }
+            },
+            default: {
+                headers: [
+                    { label: 'Nº Inscr.', class: '' },
+                    { label: 'Nome', class: '' },
+                    { label: 'Função/Especialidade', class: 'hidden md:table-cell' },
+                    { label: 'Polo', class: 'hidden lg:table-cell' },
+                    { label: 'Escola/Comunidade', class: 'hidden lg:table-cell' }
+                ],
+                getRow: (item) => {
+                    const numero = item.n_de_inscrição || item.n_de_inscricao || item.nº_de_inscrição || '';
+                    const funcao = item.função_especialidade || item.funcao_especialidade || '';
+                    const polo = item.polo || '';
+                    const escola = item.escola_comunidade || '';
+                    return `
+                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
+                        <td class="px-4 py-3 text-sm text-gray-900">${item.nome}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell">${funcao}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell text-center">${polo}</td>
+                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell">${escola}</td>
+                    `;
+                }
+            }
+        };
+
+        // Update table headers based on category
+        function updateTableHeaders() {
+            const config = columnConfigs[currentCategory] || columnConfigs.default;
+            const tableHead = document.getElementById('tableHead');
+
+            tableHead.innerHTML = `
+                <tr>
+                    ${config.headers.map(h => `
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${h.class}">
+                            ${h.label}
+                        </th>
+                    `).join('')}
+                </tr>
+            `;
+        }
+
         // Render table
         function renderTable() {
             const data = getFilteredData();
@@ -1001,6 +1068,9 @@
             const resultsCount = document.getElementById('resultsCount');
             const resultsText = document.getElementById('resultsText');
             const clearSearchBtn = document.getElementById('clearSearch');
+
+            // Update headers for current category
+            updateTableHeaders();
 
             // Update results count
             resultsCount.textContent = data.length;
@@ -1025,11 +1095,15 @@
             document.getElementById('prevPage').disabled = currentPage === 1;
             document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
 
+            // Get column config
+            const config = columnConfigs[currentCategory] || columnConfigs.default;
+            const colSpan = config.headers.length;
+
             // Render rows
             if (pageData.length === 0) {
                 tableBody.innerHTML = `
                     <tr>
-                        <td colspan="5" class="px-4 py-8 text-center text-gray-500">
+                        <td colspan="${colSpan}" class="px-4 py-8 text-center text-gray-500">
                             <i class="fas fa-search text-2xl mb-2"></i>
                             <p>Nenhum candidato encontrado${currentSearchTerm ? ' para "' + currentSearchTerm + '"' : ''}.</p>
                         </td>
@@ -1038,32 +1112,11 @@
                 return;
             }
 
-            tableBody.innerHTML = pageData.map(item => {
-                const numero = item.n_de_inscrição || item.n_de_inscricao || item.nº_de_inscrição || '';
-                const funcao = item.função_especialidade || item.funcao_especialidade || '';
-                const polo = item.polo || '';
-                const escola = item.escola_comunidade || '';
-
-                return `
-                    <tr class="hover:bg-gray-50 transition-colors">
-                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">
-                            ${numero}
-                        </td>
-                        <td class="px-4 py-3 text-sm text-gray-900">
-                            ${item.nome}
-                        </td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden md:table-cell">
-                            ${funcao}
-                        </td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell text-center">
-                            ${polo}
-                        </td>
-                        <td class="px-4 py-3 text-sm text-gray-600 hidden lg:table-cell">
-                            ${escola}
-                        </td>
-                    </tr>
-                `;
-            }).join('');
+            tableBody.innerHTML = pageData.map(item => `
+                <tr class="hover:bg-gray-50 transition-colors">
+                    ${config.getRow(item)}
+                </tr>
+            `).join('');
         }
 
         // Category tab switching
