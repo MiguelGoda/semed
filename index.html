@@ -12,6 +12,125 @@
 
 <body class="bg-gray-50">
 
+    <!-- Alert Banner - Comunicado -->
+    <div id="alertBanner" class="bg-amber-500 text-white py-3 px-4 relative hidden">
+        <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 flex-1 min-w-0">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-bullhorn text-xl animate-pulse"></i>
+                </div>
+                <p class="text-sm md:text-base font-medium">
+                    <span class="font-bold">Novo Comunicado:</span>
+                    Resultado Preliminar será publicado dia <span class="underline font-bold">28/01/2026</span>
+                </p>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+                <button onclick="openComunicadoModal()"
+                    class="bg-white text-amber-600 px-4 py-1.5 rounded-lg text-sm font-semibold hover:bg-amber-50 transition-colors">
+                    <i class="fas fa-eye mr-1"></i>
+                    Ver Comunicado
+                </button>
+                <button onclick="closeBanner()"
+                    class="text-white hover:text-amber-100 p-1.5 rounded-lg hover:bg-amber-600 transition-colors"
+                    title="Fechar">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Comunicado -->
+    <div id="comunicadoModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-modal="true" role="dialog">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeComunicadoModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-auto transform transition-all">
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-t-2xl px-6 py-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-bullhorn text-white text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Comunicado Oficial</h3>
+                        </div>
+                        <button onclick="closeComunicadoModal()"
+                            class="text-white/80 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="px-6 py-6">
+                    <!-- Cabeçalho Institucional -->
+                    <div class="text-center mb-6 pb-4 border-b border-gray-200">
+                        <p class="text-sm text-gray-600 font-medium">PREFEITURA MUNICIPAL DE BERURI</p>
+                        <p class="text-sm text-gray-600 font-medium">SECRETARIA MUNICIPAL DE EDUCAÇÃO – SEMED</p>
+                        <p class="text-sm text-gray-500 mt-1">PROCESSO SELETIVO SIMPLIFICADO</p>
+                        <p class="text-sm text-gray-500">EDITAL Nº 001, 002, 003 e 004/2026 – SEMED</p>
+                    </div>
+
+                    <!-- Título -->
+                    <h4 class="text-center text-2xl font-bold text-gray-900 mb-6">COMUNICADO</h4>
+
+                    <!-- Conteúdo -->
+                    <div class="text-gray-700 leading-relaxed space-y-4">
+                        <p class="text-justify">
+                            A Comissão Organizadora do Processo Seletivo Simplificado, instituída por meio da
+                            <strong>Portaria nº 015/2025 – SEMED</strong>, para a execução dos certames regido pelos
+                            Editais nº 001, 002, 003 e 004/2026 – SEMED, no uso de suas atribuições legais, e em
+                            observância ao princípio da publicidade, previsto no art. 37, caput, da Constituição Federal,
+                            vem <strong>TORNAR PÚBLICO</strong> que, por motivos de ordem técnica/administrativa,
+                            não foi possível realizar a publicação do Resultado Preliminar na data inicialmente prevista.
+                        </p>
+
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                            <p class="text-gray-800">
+                                Dessa forma, <strong>COMUNICA-SE</strong> que o <strong>Resultado Preliminar</strong>
+                                do Processo Seletivo Simplificado será publicado no dia
+                                <span class="text-amber-700 font-bold text-lg">28 de janeiro de 2026</span>,
+                                nos meios oficiais do Município de Beruri.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Data e Assinaturas -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <p class="text-center text-gray-600 mb-6">Beruri/AM, 23 de janeiro de 2026.</p>
+
+                        <div class="grid md:grid-cols-2 gap-6 text-center">
+                            <div>
+                                <p class="font-bold text-gray-900">WALDECILHA MATOS DA SILVA</p>
+                                <p class="text-sm text-gray-500">Presidente da Comissão do PSS</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">ELOI PICANÇO DE OLIVEIRA</p>
+                                <p class="text-sm text-gray-500">Secretário Municipal de Educação</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="bg-gray-50 rounded-b-2xl px-6 py-4 flex justify-end gap-3">
+                    <a href="downloads/COMUNICADO.docx" download
+                        class="btn-semed-outline text-sm py-2 px-4">
+                        <i class="fas fa-download mr-2"></i>
+                        Baixar Original
+                    </a>
+                    <button onclick="closeComunicadoModal()"
+                        class="btn-semed-primary text-sm py-2 px-4">
+                        <i class="fas fa-check mr-2"></i>
+                        Entendido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar-semed">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,6 +340,57 @@
             <div class="text-center mb-8 md:mb-16">
                 <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Documentos Pedagógicos</h2>
                 <p class="text-base md:text-xl text-gray-600">Documentos institucionais e orientações pedagógicas</p>
+            </div>
+
+            <!-- Comunicado Oficial - Destacado -->
+            <div class="max-w-4xl mx-auto mb-8">
+                <div class="card-semed p-6 hover:shadow-xl transition-shadow border-t-4 cursor-pointer relative overflow-hidden"
+                    style="border-color: #f59e0b;" onclick="openComunicadoModal()">
+                    <!-- Badge NOVO animado -->
+                    <div class="absolute top-4 right-4">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-500 text-white animate-pulse shadow-lg">
+                            <i class="fas fa-bell mr-1"></i>
+                            NOVO
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
+                                style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                <i class="fas fa-bullhorn text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center md:text-left pr-16">
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                                <h3 class="text-xl font-bold text-gray-900">Comunicado Oficial - PSS 2026</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                Informações sobre a nova data de publicação do Resultado Preliminar
+                            </p>
+                            <div class="bg-amber-50 border-l-4 border-amber-500 p-3 text-left">
+                                <p class="text-sm text-amber-800">
+                                    <i class="fas fa-calendar-alt mr-2"></i>
+                                    <strong>Nova data:</strong> Resultado Preliminar será publicado em <strong>28/01/2026</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <button onclick="event.stopPropagation(); openComunicadoModal()"
+                                class="btn-semed-primary inline-flex items-center text-sm py-2 px-4 whitespace-nowrap"
+                                style="background-color: #f59e0b;">
+                                <i class="fas fa-eye mr-2"></i>
+                                Ver Comunicado
+                            </button>
+                            <a href="downloads/COMUNICADO.docx" download
+                                class="text-xs text-gray-500 hover:text-amber-600 transition-colors"
+                                onclick="event.stopPropagation()">
+                                <i class="fas fa-download mr-1"></i>
+                                Baixar DOCX
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- BNCC Destacada -->
@@ -1218,6 +1388,52 @@
 
         // Initialize
         loadInscritosData();
+
+        // === COMUNICADO BANNER & MODAL ===
+
+        const BANNER_STORAGE_KEY = 'semed-comunicado-banner-closed-2026-01-23';
+        const alertBanner = document.getElementById('alertBanner');
+        const comunicadoModal = document.getElementById('comunicadoModal');
+
+        // Check if banner should be shown and open modal on first visit
+        function initBanner() {
+            const bannerClosed = localStorage.getItem(BANNER_STORAGE_KEY);
+            if (!bannerClosed) {
+                alertBanner.classList.remove('hidden');
+                // Show modal automatically on first visit
+                setTimeout(() => {
+                    openComunicadoModal();
+                }, 500);
+            }
+        }
+
+        // Close banner and remember preference
+        function closeBanner() {
+            alertBanner.classList.add('hidden');
+            localStorage.setItem(BANNER_STORAGE_KEY, 'true');
+        }
+
+        // Open modal
+        function openComunicadoModal() {
+            comunicadoModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeComunicadoModal() {
+            comunicadoModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !comunicadoModal.classList.contains('hidden')) {
+                closeComunicadoModal();
+            }
+        });
+
+        // Initialize banner on page load
+        initBanner();
     </script>
 </body>
 
