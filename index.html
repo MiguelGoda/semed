@@ -29,7 +29,7 @@
                     <a href="#cronograma" class="navbar-semed-link">Cronograma</a>
                     <a href="#documentos" class="navbar-semed-link">Documentos</a>
                     <a href="#downloads" class="navbar-semed-link">Downloads</a>
-                    <a href="#inscritos" class="navbar-semed-link">Inscritos</a>
+                    <a href="#inscritos" class="navbar-semed-link">Resultados</a>
                     <a href="#contato" class="navbar-semed-link">Contato</a>
                 </div>
 
@@ -754,12 +754,105 @@
     <!-- Separador -->
     <div class="border-t border-gray-200"></div>
 
-    <!-- Inscritos Section -->
+    <!-- Resultado Preliminar Section -->
     <section id="inscritos" class="py-12 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 md:mb-12">
-                <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Inscritos PSS 2026</h2>
-                <p class="text-base md:text-xl text-gray-600">Consulte a lista de candidatos inscritos</p>
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-4">
+                    <i class="fas fa-trophy mr-2"></i>
+                    Resultado Preliminar
+                </div>
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Classificação PSS 2026</h2>
+                <p class="text-base md:text-xl text-gray-600">Consulte a classificação e pontuação dos candidatos</p>
+            </div>
+
+            <!-- Download Results Cards -->
+            <div class="mb-10">
+                <div class="text-center mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800">
+                        <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                        Baixar Lista Completa em PDF
+                    </h3>
+                    <p class="text-sm text-gray-500 mt-1">Clique para baixar o resultado completo de cada categoria</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Professor PSS -->
+                    <a href="downloads/RESULTADO_AREA_BRANCA.pdf" download
+                        class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 p-5 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-16 h-16 bg-white/10 rounded-full"></div>
+                        <div class="relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <i class="fas fa-chalkboard-teacher text-2xl opacity-80"></i>
+                                <span class="text-xs bg-white/20 px-2 py-1 rounded-full">PDF</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Professor PSS</h4>
+                            <p class="text-sm text-blue-100 mb-3">Área Regular</p>
+                            <div class="flex items-center text-sm font-medium group-hover:underline">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar Lista
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Merendeiro PSS -->
+                    <a href="downloads/LISTA_RESULTADO_MERENDEIRO.pdf" download
+                        class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-500 to-green-700 p-5 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-16 h-16 bg-white/10 rounded-full"></div>
+                        <div class="relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <i class="fas fa-utensils text-2xl opacity-80"></i>
+                                <span class="text-xs bg-white/20 px-2 py-1 rounded-full">PDF</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Merendeiro PSS</h4>
+                            <p class="text-sm text-green-100 mb-3">Área Regular</p>
+                            <div class="flex items-center text-sm font-medium group-hover:underline">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar Lista
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Professor Indígena -->
+                    <a href="downloads/RESULTADO_AREA_INDIGENA .pdf" download
+                        class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 p-5 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-16 h-16 bg-white/10 rounded-full"></div>
+                        <div class="relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <i class="fas fa-feather-alt text-2xl opacity-80"></i>
+                                <span class="text-xs bg-white/20 px-2 py-1 rounded-full">PDF</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Professor Indígena</h4>
+                            <p class="text-sm text-amber-100 mb-3">Educação Indígena</p>
+                            <div class="flex items-center text-sm font-medium group-hover:underline">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar Lista
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Merendeiro Indígena -->
+                    <a href="downloads/LISTA_RESULTADO_MERENDEIRO_INDIGENA.pdf" download
+                        class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 p-5 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-16 h-16 bg-white/10 rounded-full"></div>
+                        <div class="relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <i class="fas fa-leaf text-2xl opacity-80"></i>
+                                <span class="text-xs bg-white/20 px-2 py-1 rounded-full">PDF</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Merendeiro Indígena</h4>
+                            <p class="text-sm text-purple-100 mb-3">Educação Indígena</p>
+                            <div class="flex items-center text-sm font-medium group-hover:underline">
+                                <i class="fas fa-download mr-2"></i>
+                                Baixar Lista
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <!-- Card Container -->
@@ -768,7 +861,7 @@
                 <!-- Search Bar -->
                 <div class="mb-6">
                     <div class="relative">
-                        <input type="text" id="searchInput" placeholder="Buscar por nome do candidato..."
+                        <input type="text" id="searchInput" placeholder="Buscar por nome ou escola/localidade..."
                             class="w-full px-4 py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none">
                         <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                     </div>
@@ -777,26 +870,30 @@
                 <!-- Category Tabs -->
                 <div class="mb-6">
                     <div class="border-b border-gray-200">
-                        <nav class="-mb-px flex flex-wrap gap-2" id="categoryTabs">
+                        <nav class="-mb-px flex flex-wrap gap-1 md:gap-2" id="categoryTabs">
                             <button data-category="professor_pss"
-                                class="category-tab active whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm transition-all">
+                                class="category-tab active whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
+                                <i class="fas fa-chalkboard-teacher hidden md:inline"></i>
                                 Professor PSS
-                                <span class="ml-2 px-2 py-0.5 rounded-full text-xs bg-green-100 text-green-800" data-count="professor_pss">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-green-100 text-green-800" data-count="professor_pss">0</span>
                             </button>
                             <button data-category="merendeiro_pss"
-                                class="category-tab whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm transition-all">
+                                class="category-tab whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
+                                <i class="fas fa-utensils hidden md:inline"></i>
                                 Merendeiro PSS
-                                <span class="ml-2 px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="merendeiro_pss">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="merendeiro_pss">0</span>
                             </button>
                             <button data-category="professor_indigena"
-                                class="category-tab whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm transition-all">
+                                class="category-tab whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
+                                <i class="fas fa-feather-alt hidden md:inline"></i>
                                 Professor Indígena
-                                <span class="ml-2 px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="professor_indigena">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="professor_indigena">0</span>
                             </button>
                             <button data-category="merendeiro_indigena"
-                                class="category-tab whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm transition-all">
+                                class="category-tab whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
+                                <i class="fas fa-leaf hidden md:inline"></i>
                                 Merendeiro Indígena
-                                <span class="ml-2 px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="merendeiro_indigena">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="merendeiro_indigena">0</span>
                             </button>
                         </nav>
                     </div>
@@ -821,32 +918,25 @@
                 </div>
 
                 <!-- Table Container - Responsive -->
-                <div class="overflow-x-auto rounded-lg border border-gray-200 scroll-smooth">
+                <div class="overflow-x-auto rounded-lg border border-gray-200 scroll-smooth shadow-sm">
                     <table class="min-w-full divide-y divide-gray-200" id="inscritosTable">
-                        <thead class="bg-gray-50" id="tableHead">
+                        <thead class="bg-gradient-to-r from-green-50 to-gray-50" id="tableHead">
                             <tr>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Nº Inscrição
-                                </th>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Nome
-                                </th>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:table-cell">
-                                    Função/Especialidade
-                                </th>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell">
-                                    Polo
-                                </th>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell">
-                                    Escola/Comunidade
-                                </th>
+                                <th class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Class.</th>
+                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Inscr.</th>
+                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Especialidade</th>
+                                <th class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Polo</th>
+                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Escola/Comunidade</th>
+                                <th class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Pont.</th>
+                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Situação</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200" id="tableBody">
                             <tr>
-                                <td colspan="5" class="px-4 py-8 text-center text-gray-500">
-                                    <i class="fas fa-spinner fa-spin text-2xl mb-2"></i>
-                                    <p>Carregando dados...</p>
+                                <td colspan="8" class="px-4 py-12 text-center text-gray-500">
+                                    <i class="fas fa-spinner fa-spin text-3xl mb-3 text-green-600"></i>
+                                    <p class="text-lg">Carregando resultados...</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -926,7 +1016,7 @@
                         <li><a href="#cronograma" class="hover:text-white transition-colors">Cronograma</a></li>
                         <li><a href="#documentos" class="hover:text-white transition-colors">Documentos</a></li>
                         <li><a href="#downloads" class="hover:text-white transition-colors">Downloads</a></li>
-                        <li><a href="#inscritos" class="hover:text-white transition-colors">Inscritos</a></li>
+                        <li><a href="#inscritos" class="hover:text-white transition-colors">Resultados</a></li>
                         <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
                     </ul>
                 </div>
@@ -1136,93 +1226,165 @@
             }
         }
 
+        // Función para remover acentos
+        function removeAccents(str) {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
         // Filter and search data
         function getFilteredData() {
             if (!inscritosData) return [];
 
             let data = inscritosData.categories[currentCategory]?.data || [];
 
-            // Apply search filter
+            // Apply search filter - busca por nome y escola/comunidade (sin sensibilidad a acentos)
             if (currentSearchTerm) {
-                data = data.filter(item =>
-                    item.nome.toLowerCase().includes(currentSearchTerm.toLowerCase())
-                );
+                const searchNormalized = removeAccents(currentSearchTerm.toLowerCase());
+                data = data.filter(item => {
+                    const nomeNormalized = removeAccents(item.nome.toLowerCase());
+                    const escolaNormalized = item.escola_comunidade ? removeAccents(item.escola_comunidade.toLowerCase()) : '';
+                    return nomeNormalized.includes(searchNormalized) || escolaNormalized.includes(searchNormalized);
+                });
             }
 
             return data;
         }
 
-        // Column configurations per category
+        // Column configurations per category - RESULTADO PRELIMINAR
         const columnConfigs = {
             professor_pss: {
                 headers: [
-                    { label: 'Nº Inscr.', class: '' },
+                    { label: 'Class.', class: 'text-center' },
+                    { label: 'Inscr.', class: '' },
                     { label: 'Nome', class: '' },
-                    { label: 'Função/Especialidade', class: '' },
-                    { label: 'Polo', class: '' },
-                    { label: 'Escola Pretendida', class: '' },
-                    { label: 'Localidade', class: '' }
+                    { label: 'Especialidade', class: '' },
+                    { label: 'Polo', class: 'text-center' },
+                    { label: 'Escola/Comunidade', class: '' },
+                    { label: 'Pont.', class: 'text-center' },
+                    { label: 'Situação', class: '' }
                 ],
                 getRow: (item) => {
+                    const classif = item.classificacao || '-';
                     const numero = item.n_de_inscrição || '';
-                    const funcao = item.função_especialidade || '';
                     const polo = item.polo || '';
                     const escola = item.escola_comunidade || '';
-                    const localidade = item.localidade || '';
+                    const pont = item.pontuacao !== undefined ? item.pontuacao : '-';
+                    const situacao = item.situacao || '';
+                    const funcao = item.funcao_especialidade || '';
+                    const pontClass = pont > 0 ? 'text-green-700 font-semibold' : 'text-gray-500';
                     return `
-                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
-                        <td class="px-4 py-3 text-sm text-gray-900 whitespace-nowrap">${item.nome}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${funcao}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 text-center">${polo}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${escola}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${localidade}</td>
+                        <td class="px-3 py-3 whitespace-nowrap text-sm font-bold text-center text-green-700">${classif}º</td>
+                        <td class="px-3 py-3 whitespace-nowrap text-sm text-gray-600">${numero}</td>
+                        <td class="px-3 py-3 text-sm font-medium text-gray-900">${item.nome}</td>
+                        <td class="px-3 py-3 text-sm"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">${funcao}</span></td>
+                        <td class="px-3 py-3 text-sm text-gray-600 text-center">${polo}</td>
+                        <td class="px-3 py-3 text-sm text-gray-600 max-w-xs truncate" title="${escola}">${escola}</td>
+                        <td class="px-3 py-3 text-sm ${pontClass} text-center">${pont}</td>
+                        <td class="px-3 py-3 text-sm">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-check-circle mr-1"></i>Classif.
+                            </span>
+                        </td>
+                    `;
+                }
+            },
+            merendeiro_pss: {
+                headers: [
+                    { label: 'Class.', class: 'text-center' },
+                    { label: 'Inscr.', class: '' },
+                    { label: 'Nome', class: '' },
+                    { label: 'Polo', class: 'text-center' },
+                    { label: 'Escola/Comunidade/Localidade', class: '' },
+                    { label: 'Pont.', class: 'text-center' },
+                    { label: 'Situação', class: '' }
+                ],
+                getRow: (item) => {
+                    const classif = item.classificacao || '-';
+                    const numero = item.n_de_inscrição || '';
+                    const polo = item.polo || '';
+                    const escola = item.escola_comunidade || '';
+                    const pont = item.pontuacao !== undefined ? item.pontuacao : '-';
+                    const pontClass = pont > 0 ? 'text-green-700 font-semibold' : 'text-gray-500';
+                    return `
+                        <td class="px-3 py-3 whitespace-nowrap text-sm font-bold text-center text-green-700">${classif}º</td>
+                        <td class="px-3 py-3 whitespace-nowrap text-sm text-gray-600">${numero}</td>
+                        <td class="px-3 py-3 text-sm font-medium text-gray-900">${item.nome}</td>
+                        <td class="px-3 py-3 text-sm text-gray-600 text-center">${polo}</td>
+                        <td class="px-3 py-3 text-sm text-gray-600 max-w-xs truncate" title="${escola}">${escola}</td>
+                        <td class="px-3 py-3 text-sm ${pontClass} text-center">${pont}</td>
+                        <td class="px-3 py-3 text-sm">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-check-circle mr-1"></i>Classif.
+                            </span>
+                        </td>
                     `;
                 }
             },
             professor_indigena: {
                 headers: [
-                    { label: 'Nº Inscr.', class: '' },
+                    { label: 'Class.', class: 'text-center' },
+                    { label: 'Inscr.', class: '' },
                     { label: 'Nome', class: '' },
-                    { label: 'Função/Especialidade', class: '' },
-                    { label: 'Polo', class: '' },
-                    { label: 'Escola Pretendida', class: '' },
-                    { label: 'Aldeia', class: '' }
+                    { label: 'Especialidade', class: '' },
+                    { label: 'Polo', class: 'text-center' },
+                    { label: 'Escola/Comunidade', class: '' },
+                    { label: 'Pont.', class: 'text-center' },
+                    { label: 'Situação', class: '' }
                 ],
                 getRow: (item) => {
+                    const classif = item.classificacao || '-';
                     const numero = item.n_de_inscrição || '';
-                    const funcao = item.função_especialidade || '';
                     const polo = item.polo || '';
                     const escola = item.escola_comunidade || '';
-                    const aldeia = item.aldeia || '';
+                    const pont = item.pontuacao !== undefined ? item.pontuacao : '-';
+                    const situacao = item.situacao || '';
+                    const funcao = item.funcao_especialidade || '';
+                    const pontClass = pont > 0 ? 'text-green-700 font-semibold' : 'text-gray-500';
                     return `
-                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
-                        <td class="px-4 py-3 text-sm text-gray-900 whitespace-nowrap">${item.nome}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${funcao}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 text-center">${polo}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${escola}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${aldeia}</td>
+                        <td class="px-3 py-3 whitespace-nowrap text-sm font-bold text-center text-green-700">${classif}º</td>
+                        <td class="px-3 py-3 whitespace-nowrap text-sm text-gray-600">${numero}</td>
+                        <td class="px-3 py-3 text-sm font-medium text-gray-900">${item.nome}</td>
+                        <td class="px-3 py-3 text-sm"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">${funcao}</span></td>
+                        <td class="px-3 py-3 text-sm text-gray-600 text-center">${polo}</td>
+                        <td class="px-3 py-3 text-sm text-gray-600 max-w-xs truncate" title="${escola}">${escola}</td>
+                        <td class="px-3 py-3 text-sm ${pontClass} text-center">${pont}</td>
+                        <td class="px-3 py-3 text-sm">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-check-circle mr-1"></i>Classif.
+                            </span>
+                        </td>
                     `;
                 }
             },
-            default: {
+            merendeiro_indigena: {
                 headers: [
-                    { label: 'Nº Inscr.', class: '' },
+                    { label: 'Class.', class: 'text-center' },
+                    { label: 'Inscr.', class: '' },
                     { label: 'Nome', class: '' },
-                    { label: 'Función/Especialidade', class: '' },
-                    { label: 'Polo', class: '' },
-                    { label: 'Escola/Comunidade', class: '' }
+                    { label: 'Polo', class: 'text-center' },
+                    { label: 'Escola/Comunidade/Localidade', class: '' },
+                    { label: 'Pont.', class: 'text-center' },
+                    { label: 'Situação', class: '' }
                 ],
                 getRow: (item) => {
-                    const numero = item.n_de_inscrição || item.n_de_inscricao || item.nº_de_inscrição || '';
-                    const funcao = item.função_especialidade || item.funcao_especialidade || '';
+                    const classif = item.classificacao || '-';
+                    const numero = item.n_de_inscrição || '';
                     const polo = item.polo || '';
                     const escola = item.escola_comunidade || '';
+                    const pont = item.pontuacao !== undefined ? item.pontuacao : '-';
+                    const pontClass = pont > 0 ? 'text-green-700 font-semibold' : 'text-gray-500';
                     return `
-                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${numero}</td>
-                        <td class="px-4 py-3 text-sm text-gray-900 whitespace-nowrap">${item.nome}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${funcao}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 text-center">${polo}</td>
-                        <td class="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">${escola}</td>
+                        <td class="px-3 py-3 whitespace-nowrap text-sm font-bold text-center text-green-700">${classif}º</td>
+                        <td class="px-3 py-3 whitespace-nowrap text-sm text-gray-600">${numero}</td>
+                        <td class="px-3 py-3 text-sm font-medium text-gray-900">${item.nome}</td>
+                        <td class="px-3 py-3 text-sm text-gray-600 text-center">${polo}</td>
+                        <td class="px-3 py-3 text-sm text-gray-600 max-w-xs truncate" title="${escola}">${escola}</td>
+                        <td class="px-3 py-3 text-sm ${pontClass} text-center">${pont}</td>
+                        <td class="px-3 py-3 text-sm">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-check-circle mr-1"></i>Classif.
+                            </span>
+                        </td>
                     `;
                 }
             }
