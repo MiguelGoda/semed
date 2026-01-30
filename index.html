@@ -12,26 +12,27 @@
 
 <body class="bg-gray-50">
 
-    <!-- Alert Banner - Comunicado Recursos -->
-    <div id="alertBanner" class="bg-gradient-to-r from-red-600 to-red-700 text-white py-3 px-4 relative hidden">
+    <!-- Alert Banner - Prova PSS 2026 -->
+    <div id="alertBanner" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-3 px-4 relative hidden">
         <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
             <div class="flex items-center gap-3 flex-1 min-w-0">
                 <div class="flex-shrink-0">
-                    <i class="fas fa-exclamation-triangle text-xl animate-pulse"></i>
+                    <i class="fas fa-clipboard-list text-xl animate-pulse"></i>
                 </div>
                 <p class="text-sm md:text-base font-medium">
-                    <span class="font-bold">Atenção!</span>
-                    Período de Recursos: <span class="underline font-bold">29 e 30 de janeiro de 2026</span>
+                    <span class="font-bold">PROVA PSS 2026:</span>
+                    <span class="underline font-bold">6 de Fevereiro</span> das 14h às 18h
+                    <span class="hidden md:inline">- Verifique seu local e sala!</span>
                 </p>
             </div>
             <div class="flex items-center gap-2 flex-shrink-0">
                 <button onclick="openComunicadoModal()"
-                    class="bg-white text-red-600 px-4 py-1.5 rounded-lg text-sm font-semibold hover:bg-red-50 transition-colors">
-                    <i class="fas fa-eye mr-1"></i>
-                    Ver Comunicado
+                    class="bg-white text-blue-600 px-4 py-1.5 rounded-lg text-sm font-semibold hover:bg-blue-50 transition-colors">
+                    <i class="fas fa-info-circle mr-1"></i>
+                    Ver Detalhes
                 </button>
                 <button onclick="closeBanner()"
-                    class="text-white hover:text-red-100 p-1.5 rounded-lg hover:bg-red-800 transition-colors"
+                    class="text-white hover:text-blue-100 p-1.5 rounded-lg hover:bg-blue-800 transition-colors"
                     title="Fechar">
                     <i class="fas fa-times text-lg"></i>
                 </button>
@@ -39,22 +40,22 @@
         </div>
     </div>
 
-    <!-- Modal Comunicado Recursos -->
+    <!-- Modal Informações da Prova -->
     <div id="comunicadoModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-modal="true" role="dialog">
         <!-- Backdrop -->
         <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeComunicadoModal()"></div>
 
         <!-- Modal Content -->
         <div class="flex min-h-full items-center justify-center p-4">
-            <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-auto transform transition-all">
+            <div class="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-auto transform transition-all">
                 <!-- Header -->
-                <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-t-2xl px-6 py-4">
+                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-t-2xl px-6 py-4">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-gavel text-white text-lg"></i>
+                                <i class="fas fa-clipboard-list text-white text-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white">Comunicado Oficial - Recursos</h3>
+                            <h3 class="text-xl font-bold text-white">Informações da Prova - PSS 2026</h3>
                         </div>
                         <button onclick="closeComunicadoModal()"
                             class="text-white/80 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
@@ -65,81 +66,163 @@
 
                 <!-- Body -->
                 <div class="px-6 py-6">
-                    <!-- Cabeçalho Institucional -->
-                    <div class="text-center mb-6 pb-4 border-b border-gray-200">
-                        <p class="text-sm text-gray-600 font-medium">PREFEITURA MUNICIPAL DE BERURI</p>
-                        <p class="text-sm text-gray-600 font-medium">SECRETARIA MUNICIPAL DE EDUCAÇÃO – SEMED</p>
-                        <p class="text-sm text-gray-500 mt-1">PROCESSO SELETIVO SIMPLIFICADO – PSS 2026</p>
-                    </div>
-
-                    <!-- Título -->
-                    <h4 class="text-center text-xl font-bold text-gray-900 mb-4">INTERPOSIÇÃO DE RECURSOS ADMINISTRATIVOS</h4>
-
-                    <!-- Informações principais -->
-                    <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-4">
+                    <!-- Informações principais da prova -->
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-5 mb-6">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                             <div>
-                                <div class="w-10 h-10 mx-auto mb-2 bg-red-100 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-calendar-alt text-red-600"></i>
+                                <div
+                                    class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-calendar-day text-blue-600 text-xl"></i>
                                 </div>
-                                <p class="text-xs text-gray-500 uppercase">Período</p>
-                                <p class="font-bold text-red-700">29 e 30 de janeiro</p>
+                                <p class="text-xs text-gray-500 uppercase font-medium">Data</p>
+                                <p class="font-bold text-blue-700 text-lg">6 de Fevereiro</p>
+                                <p class="text-xs text-gray-500">2026</p>
                             </div>
                             <div>
-                                <div class="w-10 h-10 mx-auto mb-2 bg-red-100 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-clock text-red-600"></i>
+                                <div
+                                    class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-clock text-blue-600 text-xl"></i>
                                 </div>
-                                <p class="text-xs text-gray-500 uppercase">Horário</p>
-                                <p class="font-bold text-red-700">Expediente SEMED</p>
+                                <p class="text-xs text-gray-500 uppercase font-medium">Horário</p>
+                                <p class="font-bold text-blue-700 text-lg">14h às 18h</p>
+                                <p class="text-xs text-gray-500">4 horas de prova</p>
                             </div>
                             <div>
-                                <div class="w-10 h-10 mx-auto mb-2 bg-red-100 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-map-marker-alt text-red-600"></i>
+                                <div
+                                    class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-school text-blue-600 text-xl"></i>
                                 </div>
-                                <p class="text-xs text-gray-500 uppercase">Local</p>
-                                <p class="font-bold text-red-700">SEMED</p>
+                                <p class="text-xs text-gray-500 uppercase font-medium">Local</p>
+                                <p class="font-bold text-blue-700 text-lg">Esc. Mun. José B. Moraes</p>
+                                <p class="text-xs text-gray-500">Beruri - AM</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Conteúdo -->
-                    <div class="text-gray-700 leading-relaxed space-y-3 text-sm">
-                        <p class="text-justify">
-                            Os recursos deverão ser apresentados em <strong>formulário próprio</strong>, devidamente
-                            preenchidos, fundamentados e acompanhados da documentação comprobatória pertinente,
-                            observando rigorosamente as disposições constantes no edital e suas erratas.
-                        </p>
-
-                        <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-lg">
-                            <p class="text-amber-800">
-                                <i class="fas fa-exclamation-circle mr-2"></i>
-                                <strong>Atenção:</strong> Não serão conhecidos recursos interpostos fora do prazo,
-                                em desacordo com as normas editalícias ou sem a devida fundamentação.
-                            </p>
+                    <!-- Documentos Exigidos -->
+                    <div class="mb-6">
+                        <h4 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-file-alt text-blue-600 mr-2"></i>
+                            Documentos Exigidos (Obrigatórios)
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <div class="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fas fa-id-card text-blue-500"></i>
+                                    <span class="font-semibold text-sm text-gray-800">Documento com Foto</span>
+                                </div>
+                                <ul class="text-xs text-gray-600 space-y-1 ml-5">
+                                    <li>• RG (Carteira de Identidade)</li>
+                                    <li>• CNH</li>
+                                    <li>• CIN</li>
+                                    <li>• Passaporte</li>
+                                    <li>• CTPS</li>
+                                    <li>• Carteiras Profissionais</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fas fa-file-signature text-green-500"></i>
+                                    <span class="font-semibold text-sm text-gray-800">Comprovante</span>
+                                </div>
+                                <p class="text-xs text-gray-600 ml-5">
+                                    Comprovante de inscrição do PSS 2026 (impresso ou digital)
+                                </p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fas fa-pen text-purple-500"></i>
+                                    <span class="font-semibold text-sm text-gray-800">Caneta</span>
+                                </div>
+                                <p class="text-xs text-gray-600 ml-5">
+                                    Caneta esferográfica <strong>preta ou azul</strong> (tinta e corpo transparente)
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Data e Assinaturas -->
-                    <div class="mt-6 pt-4 border-t border-gray-200">
-                        <p class="text-center text-gray-600 text-sm">Beruri/AM, 28 de janeiro de 2026.</p>
-                        <p class="text-center text-xs text-gray-500 mt-2">COMISSÃO ESPECIAL DO PSS 2026 – SEMED</p>
+                    <!-- Links para documentos de local -->
+                    <div class="bg-blue-50 rounded-xl p-4 mb-4">
+                        <h5 class="font-bold text-blue-800 mb-3 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Consulte seu Local e Sala de Prova:
+                        </h5>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO_FUND_POLO_I.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Fund. Polo I</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO_FUND_POLO_II.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Fund. Polo II</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO_ FUND_POLO_III.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Fund. Polo III</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO _FUND_POLO_IV.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Fund. Polo IV</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO_FUND_POLO_V.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Fund. Polo V</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PROV_EDU_INF_POLO_I_ II_ III _IV.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Ed. Infantil I, II, III e IV</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO_EDU_INF_POLO_V.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Ed. Infantil V</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PROVA_EDUCAÇÃO_FISICA_POLO_V.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Ed. Física V</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO_ENS_FUND_INDIGENA_POLO_V.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Fund. Indígena</span>
+                            </a>
+                            <a href="downloads/LOCAL_PRUEBA/LOCAL_PRO_LINGUA_MATERNA_INDIGENA.pdf" download
+                                class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <span class="text-gray-700">Língua Materna</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Alerta Importante -->
+                    <div class="bg-amber-50 border-2 border-amber-400 rounded-xl p-4">
+                        <div class="flex items-start gap-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-exclamation-triangle text-amber-500 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-amber-800 mb-1">ATENÇÃO CANDIDATO!</h5>
+                                <p class="text-sm text-amber-700">
+                                    <strong>Verifique seu nome e número da sala</strong> nos documentos acima.
+                                    Compareça no local correto com <strong>antecedência mínima de 30 minutos</strong>.
+                                    Não será permitida a entrada após o fechamento dos portões.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Footer -->
-                <div class="bg-gray-50 rounded-b-2xl px-6 py-4 flex flex-col sm:flex-row justify-end gap-3">
-                    <a href="downloads/Ficha de RECURSO.pdf" download
-                        class="btn-semed-outline text-sm py-2 px-4 text-center">
-                        <i class="fas fa-file-alt mr-2"></i>
-                        Baixar Ficha de Recurso
-                    </a>
-                    <a href="downloads/COMUNICADO.pdf" download
-                        class="btn-semed-outline text-sm py-2 px-4 text-center">
-                        <i class="fas fa-download mr-2"></i>
-                        Baixar Comunicado
-                    </a>
-                    <button onclick="closeComunicadoModal()"
-                        class="btn-semed-primary text-sm py-2 px-4" style="background-color: #dc2626;">
+                <div class="bg-gray-50 rounded-b-2xl px-6 py-4 flex justify-end">
+                    <button onclick="closeComunicadoModal()" class="btn-semed-primary text-sm py-2 px-6"
+                        style="background-color: #4f46e5;">
                         <i class="fas fa-check mr-2"></i>
                         Entendido
                     </button>
@@ -215,7 +298,7 @@
                 <a href="#downloads"
                     class="btn-semed-outline border-white text-white hover:bg-white hover:text-green-700 py-3 md:py-2 text-base">
                     <i class="fas fa-download mr-2"></i>
-                    Baixar Recursos
+                    Documentos
                 </a>
             </div>
         </div>
@@ -359,13 +442,14 @@
                 <p class="text-base md:text-xl text-gray-600">Documentos institucionais e orientações pedagógicas</p>
             </div>
 
-            <!-- Comunicado Recursos - Destacado -->
+            <!-- Informações da Prova - Destacado -->
             <div class="max-w-4xl mx-auto mb-8">
                 <div class="card-semed p-6 hover:shadow-xl transition-shadow border-t-4 cursor-pointer relative overflow-hidden"
-                    style="border-color: #dc2626;" onclick="openComunicadoModal()">
-                    <!-- Badge NOVO animado -->
+                    style="border-color: #2563eb;" onclick="openComunicadoModal()">
+                    <!-- Badge IMPORTANTE animado -->
                     <div class="absolute top-4 right-4">
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-600 text-white animate-pulse shadow-lg">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white animate-pulse shadow-lg">
                             <i class="fas fa-bell mr-1"></i>
                             IMPORTANTE
                         </span>
@@ -374,37 +458,36 @@
                     <div class="flex flex-col md:flex-row items-center gap-6">
                         <div class="flex-shrink-0">
                             <div class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
-                                style="background: linear-gradient(135deg, #dc2626, #b91c1c);">
-                                <i class="fas fa-gavel text-3xl text-white"></i>
+                                style="background: linear-gradient(135deg, #2563eb, #1d4ed8);">
+                                <i class="fas fa-clipboard-list text-3xl text-white"></i>
                             </div>
                         </div>
                         <div class="flex-1 text-center md:text-left pr-16">
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
-                                <h3 class="text-xl font-bold text-gray-900">Interposição de Recursos - PSS 2026</h3>
+                                <h3 class="text-xl font-bold text-gray-900">Prova PSS 2026 - Informações</h3>
                             </div>
                             <p class="text-sm text-gray-600 mb-3">
-                                Prazo para apresentação de recursos administrativos
+                                Data, horário, local e documentos necessários para a prova
                             </p>
-                            <div class="bg-red-50 border-l-4 border-red-500 p-3 text-left">
-                                <p class="text-sm text-red-800">
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-3 text-left">
+                                <p class="text-sm text-blue-800">
                                     <i class="fas fa-calendar-alt mr-2"></i>
-                                    <strong>Período:</strong> 29 e 30 de janeiro de 2026 | <strong>Local:</strong> SEMED
+                                    <strong>Data:</strong> 6 de Fevereiro de 2026 | <strong>Horário:</strong> 14h às 18h
+                                    | <strong>Local:</strong> Esc. José B. Moraes
                                 </p>
                             </div>
                         </div>
                         <div class="flex flex-col items-center gap-2">
                             <button onclick="event.stopPropagation(); openComunicadoModal()"
                                 class="btn-semed-primary inline-flex items-center text-sm py-2 px-4 whitespace-nowrap"
-                                style="background-color: #dc2626;">
+                                style="background-color: #2563eb;">
                                 <i class="fas fa-eye mr-2"></i>
-                                Ver Comunicado
+                                Ver Detalhes
                             </button>
-                            <a href="downloads/Ficha de RECURSO.pdf" download
-                                class="text-xs text-gray-500 hover:text-red-600 transition-colors"
-                                onclick="event.stopPropagation()">
-                                <i class="fas fa-download mr-1"></i>
-                                Baixar Ficha de Recurso
-                            </a>
+                            <span class="text-xs text-gray-500" onclick="event.stopPropagation()">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Consulte seu local de prova
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -447,7 +530,8 @@
             <div class="max-w-6xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-6">
                     <!-- Resolução MEC -->
-                    <div class="card-semed p-6 hover:shadow-xl transition-shadow border-l-4" style="border-color: #059669;">
+                    <div class="card-semed p-6 hover:shadow-xl transition-shadow border-l-4"
+                        style="border-color: #059669;">
                         <div class="text-center">
                             <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center shadow-lg"
                                 style="background: linear-gradient(135deg, #059669, #10b981);">
@@ -477,7 +561,8 @@
                     </div>
 
                     <!-- Proposta Curricular -->
-                    <div class="card-semed p-6 hover:shadow-xl transition-shadow border-l-4" style="border-color: #1e40af;">
+                    <div class="card-semed p-6 hover:shadow-xl transition-shadow border-l-4"
+                        style="border-color: #1e40af;">
                         <div class="text-center">
                             <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center shadow-lg"
                                 style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
@@ -726,7 +811,8 @@
                 <div class="card-semed p-6 hover:shadow-lg transition-shadow border-l-4 relative"
                     style="border-color: #dc2626;">
                     <div class="absolute -top-2 -right-2">
-                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-600 text-white animate-pulse">
+                        <span
+                            class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-600 text-white animate-pulse">
                             NOVO
                         </span>
                     </div>
@@ -743,7 +829,8 @@
                                     Recursos
                                 </span>
                             </div>
-                            <p class="text-sm text-gray-600 mb-3">Formulário para interposição de recursos - PSS 2026</p>
+                            <p class="text-sm text-gray-600 mb-3">Formulário para interposição de recursos - PSS 2026
+                            </p>
                             <div class="flex items-center justify-between">
                                 <span class="text-xs text-gray-500">PDF</span>
                                 <a href="downloads/Ficha de RECURSO.pdf" download
@@ -833,7 +920,8 @@
                 <div class="card-semed p-6 hover:shadow-lg transition-shadow border-l-4 relative overflow-hidden"
                     style="border-color: #dc2626;">
                     <div class="absolute top-3 right-3">
-                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
+                        <span
+                            class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
                             <i class="fas fa-star mr-1"></i>
                             NOVO
                         </span>
@@ -868,7 +956,8 @@
                 <div class="card-semed p-6 hover:shadow-lg transition-shadow border-l-4 relative overflow-hidden"
                     style="border-color: #dc2626;">
                     <div class="absolute top-3 right-3">
-                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
+                        <span
+                            class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
                             <i class="fas fa-star mr-1"></i>
                             NOVO
                         </span>
@@ -903,7 +992,8 @@
                 <div class="card-semed p-6 hover:shadow-lg transition-shadow border-l-4 relative overflow-hidden"
                     style="border-color: #dc2626;">
                     <div class="absolute top-3 right-3">
-                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
+                        <span
+                            class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
                             <i class="fas fa-star mr-1"></i>
                             NOVO
                         </span>
@@ -938,7 +1028,8 @@
                 <div class="card-semed p-6 hover:shadow-lg transition-shadow border-l-4 relative overflow-hidden"
                     style="border-color: #dc2626;">
                     <div class="absolute top-3 right-3">
-                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
+                        <span
+                            class="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white animate-pulse shadow-lg">
                             <i class="fas fa-star mr-1"></i>
                             NOVO
                         </span>
@@ -979,7 +1070,8 @@
     <section id="inscritos" class="py-12 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 md:mb-12">
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-4">
+                <div
+                    class="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-4">
                     <i class="fas fa-trophy mr-2"></i>
                     Resultado Preliminar
                 </div>
@@ -1096,25 +1188,29 @@
                                 class="category-tab active whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
                                 <i class="fas fa-chalkboard-teacher hidden md:inline"></i>
                                 Professor PSS
-                                <span class="px-2 py-0.5 rounded-full text-xs bg-green-100 text-green-800" data-count="professor_pss">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-green-100 text-green-800"
+                                    data-count="professor_pss">0</span>
                             </button>
                             <button data-category="merendeiro_pss"
                                 class="category-tab whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
                                 <i class="fas fa-utensils hidden md:inline"></i>
                                 Merendeiro PSS
-                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="merendeiro_pss">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600"
+                                    data-count="merendeiro_pss">0</span>
                             </button>
                             <button data-category="professor_indigena"
                                 class="category-tab whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
                                 <i class="fas fa-feather-alt hidden md:inline"></i>
                                 Professor Indígena
-                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="professor_indigena">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600"
+                                    data-count="professor_indigena">0</span>
                             </button>
                             <button data-category="merendeiro_indigena"
                                 class="category-tab whitespace-nowrap py-3 px-3 md:px-4 border-b-2 font-medium text-sm transition-all flex items-center gap-2">
                                 <i class="fas fa-leaf hidden md:inline"></i>
                                 Merendeiro Indígena
-                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600" data-count="merendeiro_indigena">0</span>
+                                <span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600"
+                                    data-count="merendeiro_indigena">0</span>
                             </button>
                         </nav>
                     </div>
@@ -1143,14 +1239,30 @@
                     <table class="min-w-full divide-y divide-gray-200" id="inscritosTable">
                         <thead class="bg-gradient-to-r from-green-50 to-gray-50" id="tableHead">
                             <tr>
-                                <th class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Class.</th>
-                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Inscr.</th>
-                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
-                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Especialidade</th>
-                                <th class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Polo</th>
-                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Escola/Comunidade</th>
-                                <th class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Pont.</th>
-                                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Situação</th>
+                                <th
+                                    class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Class.</th>
+                                <th
+                                    class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Inscr.</th>
+                                <th
+                                    class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Nome</th>
+                                <th
+                                    class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Especialidade</th>
+                                <th
+                                    class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Polo</th>
+                                <th
+                                    class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Escola/Comunidade</th>
+                                <th
+                                    class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Pont.</th>
+                                <th
+                                    class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Situação</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200" id="tableBody">
@@ -1167,14 +1279,17 @@
                 <!-- Pagination -->
                 <div class="mt-6 flex items-center justify-between flex-wrap gap-4">
                     <div class="text-sm text-gray-600">
-                        Página <span id="currentPage" class="font-semibold">1</span> de <span id="totalPages" class="font-semibold">1</span>
+                        Página <span id="currentPage" class="font-semibold">1</span> de <span id="totalPages"
+                            class="font-semibold">1</span>
                     </div>
                     <div class="flex gap-2">
-                        <button id="prevPage" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all">
+                        <button id="prevPage"
+                            class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all">
                             <i class="fas fa-chevron-left mr-1"></i>
                             Anterior
                         </button>
-                        <button id="nextPage" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all">
+                        <button id="nextPage"
+                            class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all">
                             Próximo
                             <i class="fas fa-chevron-right ml-1"></i>
                         </button>
@@ -1687,7 +1802,7 @@
 
         // Category tab switching
         document.querySelectorAll('.category-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
+            tab.addEventListener('click', function () {
                 // Update active tab
                 document.querySelectorAll('.category-tab').forEach(t => {
                     t.classList.remove('active', 'border-green-500', 'text-green-600');
@@ -1714,7 +1829,7 @@
         const searchInput = document.getElementById('searchInput');
         let searchTimeout;
 
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', function () {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
                 currentSearchTerm = this.value.trim();
@@ -1724,7 +1839,7 @@
         });
 
         // Clear search
-        document.getElementById('clearSearch').addEventListener('click', function() {
+        document.getElementById('clearSearch').addEventListener('click', function () {
             searchInput.value = '';
             currentSearchTerm = '';
             currentPage = 1;
@@ -1733,7 +1848,7 @@
         });
 
         // Pagination
-        document.getElementById('prevPage').addEventListener('click', function() {
+        document.getElementById('prevPage').addEventListener('click', function () {
             if (currentPage > 1) {
                 currentPage--;
                 renderTable();
@@ -1741,7 +1856,7 @@
             }
         });
 
-        document.getElementById('nextPage').addEventListener('click', function() {
+        document.getElementById('nextPage').addEventListener('click', function () {
             const data = getFilteredData();
             const totalPages = Math.ceil(data.length / itemsPerPage);
             if (currentPage < totalPages) {
@@ -1756,7 +1871,7 @@
 
         // === COMUNICADO RECURSOS BANNER & MODAL ===
 
-        const BANNER_STORAGE_KEY = 'semed-comunicado-recursos-2026-01-28';
+        const BANNER_STORAGE_KEY = 'semed-prova-pss-2026-02-06';
         const alertBanner = document.getElementById('alertBanner');
         const comunicadoModal = document.getElementById('comunicadoModal');
 
@@ -1791,7 +1906,7 @@
         }
 
         // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && !comunicadoModal.classList.contains('hidden')) {
                 closeComunicadoModal();
             }
