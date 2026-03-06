@@ -1556,7 +1556,72 @@
         <i class="fas fa-arrow-up text-lg md:text-xl"></i>
     </button>
 
+    <!-- Modal Nota de Esclarecimento -->
+    <div id="modalEsclarecimento" style="display:none" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <!-- Overlay -->
+        <div id="overlayModal" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- Modal Content -->
+        <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full mx-auto overflow-hidden">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-red-600 to-red-700 px-6 py-4 flex items-center gap-3">
+                <div class="bg-white/20 rounded-full p-2">
+                    <i class="fas fa-exclamation-triangle text-white text-xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-white font-bold text-lg leading-tight">NOTA DE ESCLARECIMENTO</h2>
+                    <p class="text-red-100 text-xs">Terceira Convocação — PSS 2026</p>
+                </div>
+            </div>
+            <!-- Body -->
+            <div class="px-6 py-5">
+                <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                    A Secretaria Municipal de Educação — <strong>SEMED</strong> informa que a candidata
+                    abaixo foi incluída na <strong>3ª Convocação do PSS 2026 por erro</strong> e,
+                    portanto, <strong>não deve se apresentar para assumir vaga</strong>:
+                </p>
+                <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-4 space-y-1">
+                    <div class="flex items-start gap-2 text-sm">
+                        <span class="text-red-500 font-semibold w-28 shrink-0">Inscrição nº:</span>
+                        <span class="text-gray-800 font-bold">017</span>
+                    </div>
+                    <div class="flex items-start gap-2 text-sm">
+                        <span class="text-red-500 font-semibold w-28 shrink-0">Nome:</span>
+                        <span class="text-gray-800 font-bold">SHILES DUARTE DE SENA</span>
+                    </div>
+                    <div class="flex items-start gap-2 text-sm">
+                        <span class="text-red-500 font-semibold w-28 shrink-0">Polo:</span>
+                        <span class="text-gray-800">POLO III</span>
+                    </div>
+                    <div class="flex items-start gap-2 text-sm">
+                        <span class="text-red-500 font-semibold w-28 shrink-0">Escola/Local.:</span>
+                        <span class="text-gray-800">RUI BARBOSA / BOM JESUS / LAGO DO PUPUNHA II</span>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed">
+                    Pedimos desculpas pelo transtorno. Em caso de dúvidas, entre em contato com a SEMED.
+                </p>
+            </div>
+            <!-- Footer -->
+            <div class="px-6 pb-5 flex justify-end">
+                <button id="fecharModal"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors duration-200 text-sm">
+                    Entendi
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Popup Nota de Esclarecimento - Terceira Convocação
+        const modalEl = document.getElementById('modalEsclarecimento');
+        modalEl.style.display = 'flex';
+        document.getElementById('fecharModal').addEventListener('click', function () {
+            modalEl.style.display = 'none';
+        });
+        document.getElementById('overlayModal').addEventListener('click', function () {
+            modalEl.style.display = 'none';
+        });
+
         // Contador de Visitas con múltiples fallbacks
         async function updateVisitCounter() {
             const counterElement = document.getElementById('visitCounter');
@@ -1989,7 +2054,7 @@
         const searchInput = document.getElementById('searchInput');
         let searchTimeout;
 
-        searchInput.addEventListener('input', function () {
+        if (searchInput) searchInput.addEventListener('input', function () {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
                 currentSearchTerm = this.value.trim();
@@ -1999,8 +2064,9 @@
         });
 
         // Clear search
-        document.getElementById('clearSearch').addEventListener('click', function () {
-            searchInput.value = '';
+        const clearSearchBtn = document.getElementById('clearSearch');
+        if (clearSearchBtn) clearSearchBtn.addEventListener('click', function () {
+            if (searchInput) searchInput.value = '';
             currentSearchTerm = '';
             currentPage = 1;
             renderTable();
